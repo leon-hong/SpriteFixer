@@ -98,6 +98,11 @@ if __name__ == "__main__":
     dir_src: str = 'D:/temp/img_src'
     dir_dest: str = 'D:/temp/img_dest2'
 
+    # 이미지 원본 폴더가 없으면 오류
+    if not os.path.exists(dir_src):
+        print("Error : " + dir_src + " does not exist.")
+        exit()
+
     # 출력 폴더가 없으면 생성
     if not os.path.exists(dir_dest):
         os.makedirs(dir_dest)
