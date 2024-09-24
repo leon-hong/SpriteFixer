@@ -96,7 +96,11 @@ if __name__ == "__main__":
 
     # 이미지 폴더 경로
     dir_src: str = 'D:/temp/img_src'
-    dir_dest: str = 'D:/temp/img_dest'
+    dir_dest: str = 'D:/temp/img_dest2'
+
+    # 출력 폴더가 없으면 생성
+    if not os.path.exists(dir_dest):
+        os.makedirs(dir_dest)
 
     # 이미지들 경로
     all_files: List[str] = get_all_files(dir_src)    
